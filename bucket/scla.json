@@ -1,6 +1,7 @@
 {
-    "version": "2.0.0.140603",  
+    "version": "2.0.0.140603", 
+    "description" : "Sitecore Log analyser",
     "url": "https://marketplace.sitecore.net/services/~/download/A99BCECAD8B44DA8B2CB27FC0BC6DD05.ashx#/dl.zip",
     "homepage": "https://marketplace.sitecore.net/en/Modules/Sitecore_Log_Analyzer.aspx",
-    "bin": [ "SCLA.Launcher.exe", "scla" ] 
+    "bin": [[ "SCLA.Launcher.exe", "scla" ] ]
 }

@@ -1,0 +1,18 @@
+{
+    "version": "2.0.3",
+    "url": "http://www.rockpapersitecore.com/wp-content/uploads/sifless.zip",
+    "homepage": "https://github.com/RAhnemann/sif-less",
+    "checkver": {
+        "url": "http://localhost/readme.txt",
+        "re": "\\bVersion\\s*(\\d+).(\\d+).(\\d+)\\b",
+        "replace": "${1}.${2}.${3}"
+    },
+    "autoupdate": {
+        "url": "http://localhost/sifless.zip"
+    },
+    "bin": "SIFLess.exe",
+    "persist": [
+        "Data",
+        "PSTemplates"
+    ]
+}

@@ -1,9 +1,9 @@
 {
-    "version": "0.7.1",
-    "url": "https://github.com/FreeTubeApp/FreeTube/releases/download/v0.7.1-beta/FreeTube-0.7.1-win.zip",
+    "version": "0.7.2",
+    "url": "https://github.com/FreeTubeApp/FreeTube/releases/download/v0.7.2-beta/FreeTube-0.7.2-win.zip",
     "description": "An Open Source YouTube app for privacy ",
     "license": "GNU General Public License v3.0",
-    "hash": "5cd3c96466adf1b245b0899c9d734c3210d6d5baee150b5100b9dfc04a2fe7f5",
+    "hash": "d5c5e3398fb6660022e0348763605e4b6526bd7bfbb1aed500cbfdcc7d05f53b",
     "homepage": "https://freetubeapp.io/ ",
     "checkver": {
         "github": "https://github.com/FreeTubeApp/FreeTube"

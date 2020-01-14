@@ -1,0 +1,26 @@
+{
+    "homepage": "https://bitbucket.org/ligos/readablepassphrasegenerator/wiki/Home",
+    "description": "The Readable Passphrase Generator generates passphrases which are (mostly) grammatically correct but nonsensical. These are easy to remember (for humans) but difficult to guess (for humans and computers).",
+    "license": "Apache License - Version 2.0",
+    "version": "1.1.2",
+    "url": "https://bitbucket.org/ligos/readablepassphrasegenerator/downloads/ReadablePassphrase%201.1.2.plgx",
+    "hash": "815ad95971eae8629aab665aec36a0824b9e6f1214367d977085e375bfb9b8b2",
+    "depends": "extras/keepass",
+    "checkver": {
+        "url": "https://bitbucket.org/ligos/readablepassphrasegenerator/downloads/",
+        "regex": "ReadablePassphrase (\\S+).plgx"
+    },
+    "autoupdate": {
+        "url": "https://bitbucket.org/ligos/readablepassphrasegenerator/downloads/ReadablePassphrase%20$version.plgx",
+        "hash": {
+            "url": "https://bitbucket.org/ligos/readablepassphrasegenerator/downloads/ReadablePassphrase%20$version.plgx%20signatures.txt",
+            "find": "SHA256:\\s+(.*)"
+        }
+    },
+    "installer": {
+        "script": "Copy-Item \"$dir\\ReadablePassphrase%20$version.plgx\" \"$(appdir keepass $global)\\current\\Plugins\\ReadablePassphrase.plgx\""
+    },
+    "uninstaller": {
+        "script": "Remove-Item \"$(appdir keepass $global)\\current\\Plugins\\ReadablePassphrase.plgx\""
+    }
+}

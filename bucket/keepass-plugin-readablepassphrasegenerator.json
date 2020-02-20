@@ -1,20 +1,20 @@
 {
-    "homepage": "https://bitbucket.org/ligos/readablepassphrasegenerator/wiki/Home",
+    "homepage": "https://github.com/ligos/readablepassphrasegenerator",
     "description": "The Readable Passphrase Generator generates passphrases which are (mostly) grammatically correct but nonsensical. These are easy to remember (for humans) but difficult to guess (for humans and computers).",
     "license": "Apache License - Version 2.0",
-    "version": "1.1.2",
-    "url": "https://bitbucket.org/ligos/readablepassphrasegenerator/downloads/ReadablePassphrase%201.1.2.plgx",
-    "hash": "815ad95971eae8629aab665aec36a0824b9e6f1214367d977085e375bfb9b8b2",
+    "version": "1.2.0",
+    "url": "https://github.com/ligos/readablepassphrasegenerator/releases/download/release-1.2.0/ReadablePassphrase.1.2.0.plgx",
+    "hash": "f3efabe676c7f12ce4115b5ba450d1aa272298f2f6469423a5e59eb43da2c2b2",
     "depends": "extras/keepass",
     "checkver": {
-        "url": "https://bitbucket.org/ligos/readablepassphrasegenerator/downloads/",
-        "regex": "ReadablePassphrase (\\S+).plgx"
+        "github": "https://github.com/ligos/readablepassphrasegenerator",
+        "regex": "release-((\\d\\.)+\\d)"
     },
     "autoupdate": {
-        "url": "https://bitbucket.org/ligos/readablepassphrasegenerator/downloads/ReadablePassphrase%20$version.plgx",
+        "url": "https://github.com/ligos/readablepassphrasegenerator/releases/download/release-$version/ReadablePassphrase.$version.plgx",
         "hash": {
-            "url": "https://bitbucket.org/ligos/readablepassphrasegenerator/downloads/ReadablePassphrase%20$version.plgx%20signatures.txt",
-            "find": "SHA256:\\s+(.*)"
+            "url": "https://github.com/ligos/readablepassphrasegenerator/releases/download/release-$version/ReadablePassphrase.$version.plgx.signatures.txt",
+            "find": "SHA256 for data:\\s+(.*)"
         }
     },
     "installer": {

@@ -2,9 +2,9 @@
     "homepage": "https://github.com/ligos/readablepassphrasegenerator",
     "description": "The Readable Passphrase Generator generates passphrases which are (mostly) grammatically correct but nonsensical. These are easy to remember (for humans) but difficult to guess (for humans and computers).",
     "license": "Apache License - Version 2.0",
-    "version": "1.2.0",
-    "url": "https://github.com/ligos/readablepassphrasegenerator/releases/download/release-1.2.0/ReadablePassphrase.1.2.0.plgx",
-    "hash": "f3efabe676c7f12ce4115b5ba450d1aa272298f2f6469423a5e59eb43da2c2b2",
+    "version": "1.2.1",
+    "url": "https://github.com/ligos/readablepassphrasegenerator/releases/download/release-1.2.1/ReadablePassphrase.1.2.1.plgx",
+    "hash": "d91261ae0001fd1c78775e8d4354b69bb4b33432811e8e66a4ba19eb185ac35a",
     "depends": "extras/keepass",
     "checkver": {
         "github": "https://github.com/ligos/readablepassphrasegenerator",

@@ -1,9 +1,9 @@
 {
-    "version": "3.5.5",
-    "url": "https://github.com/ArcadeRenegade/SidebarDiagnostics/releases/download/3.5.5/Standalone.zip",
+    "version": "3.5.6",
+    "url": "https://github.com/ArcadeRenegade/SidebarDiagnostics/releases/download/3.5.6/Standalone.zip",
     "description": "A simple sidebar for Windows desktop that displays hardware diagnostic information.",
     "license": "GNU GENERAL PUBLIC LICENSE",
-    "hash": "2974c71ec43cf677ae7477768c2506fce6eaf6c640391b94c7288f8e8409a59e",
+    "hash": "9d34318df37539fff609f9395f85970023fd334b0b27e7afa4d44355630d8250",
     "homepage": "https://github.com/ArcadeRenegade/SidebarDiagnostics",
     "checkver": {
         "github": "https://github.com/ArcadeRenegade/SidebarDiagnostics"

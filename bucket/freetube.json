@@ -1,12 +1,12 @@
 {
-    "version": "0.9.0",
+    "version": "0.9.1",
     "description": "An Open Source YouTube app for privacy ",
     "license": "GNU General Public License v3.0",
     "homepage": "https://freetubeapp.io/ ",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/FreeTubeApp/FreeTube/releases/download/v0.9.0-beta/freetube-0.9.0-win-x64-portable.zip",
-            "hash": "091c846a27367da4dc122325e8c1c29413c662f1fe3a757c769602077ec08738",
+            "url": "https://github.com/FreeTubeApp/FreeTube/releases/download/v0.9.1-beta/freetube-0.9.1-win-x64-portable.zip",
+            "hash": "c5c8c2db8bbcf94a9c22adf74faa10aacb6b41c8b104fcd6df087f7f9cebcd3e",
             "pre_install": "Expand-7zipArchive \"$dir\\freetube-$version-win.zip\"  \"$dir\" -Removal"
         }
     },

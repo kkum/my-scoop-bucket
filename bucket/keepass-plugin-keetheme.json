@@ -1,0 +1,20 @@
+{
+    "version": "0.6.11",
+    "url": [
+        "https://github.com/xatupal/KeeTheme/releases/download/v0.6.11/KeeTheme.dll",
+        "https://github.com/xatupal/KeeTheme/releases/download/v0.6.11/KeeTheme.plgx"
+    ],
+    "description": "KeeTheme Plugin changes the appearance of KeePass, to make it look better at night.",
+    "hash": [
+        "b9d16ca7e3b5fbc66822adb2e2141060e71b2c9e73aff10fd86fdf01c6807193",
+        "4bd28cbe9c474b2da317f8b412eae0f3119077a3694585ec5f0580ad65269941"
+    ],
+    "depends": "extras/keepass",
+    "homepage": "https://github.com/xatupal/KeeTheme",
+        "installer": {
+        "script": "Get-Process -Name KeePass -ErrorAction SilentlyContinue | Stop-Process -Force -Verbose; Copy-Item \"$dir\\KeeTheme*\" \"$(appdir keepass $global)\\current\\Plugins\\\"; KeePass"
+    },
+    "uninstaller": {
+        "script": "Get-Process -Name KeePass -ErrorAction SilentlyContinue | Stop-Process -Force -Verbose; Get-Item \"$(appdir keepass $global)\\current\\Plugins\\KeeTheme*\" | Remove-Item -Force; KeePass"
+    }
+}

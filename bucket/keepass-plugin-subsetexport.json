@@ -1,0 +1,14 @@
+{
+    "version": "0.5.0",
+    "url": "https://github.com/lukeIam/KeePassSubsetExport/releases/download/0.5.0/KeePassSubsetExport.plgx",
+    "description": "KeeAutoExec This plugin allows to automatically open additional databases when opening a database.",
+    "hash": "385efea8ad3dfe207cca8c5ab057c64f1be5083b15aa09d5500523c3782887b8",
+    "depends": "extras/keepass",
+    "homepage": "https://github.com/lukeIam/KeePassSubsetExport",
+    "installer": {
+        "script": "Get-Process -Name KeePass -ErrorAction SilentlyContinue | Stop-Process -Force -Verbose; Copy-Item \"$dir\\KeePassSubsetExport.plgx\" \"$(appdir keepass $global)\\current\\Plugins\\KeePassSubsetExport.plgx\"; KeePass"
+    },
+    "uninstaller": {
+        "script": "Get-Process -Name KeePass -ErrorAction SilentlyContinue | Stop-Process -Force -Verbose; Remove-Item \"$(appdir keepass $global)\\current\\Plugins\\KeePassSubsetExport.plgx\" -Force; KeePass"
+    }
+}

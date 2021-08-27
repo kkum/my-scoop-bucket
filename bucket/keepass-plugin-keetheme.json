@@ -6,8 +6,8 @@
     ],
     "description": "KeeTheme Plugin changes the appearance of KeePass, to make it look better at night.",
     "hash": [
-        "c8fbef5e86698f503325630277abea043599be2a873cf286796583909009c804",
-        "961e8acb5256b17efef2f2dd46cd96c09eeb5e74deb4a10a60dff59f9764b43a"
+        "29b016b1e4e9850ff2c792e5742f8600b52c55d8392a19246978a1687c17f251",
+        "1ce8a3c3d3a853e1f6fef025768ecf85b50f2ac0546cf719df4a12a857fd11b3"
     ],
     "checkver": {
         "github": "https://github.com/xatupal/KeeTheme"

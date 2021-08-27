@@ -1,9 +1,9 @@
 {
-    "version": "3.1.1",
-    "url": "https://github.com/sirAndros/KeePassWinHello/releases/download/v3.1.1/KeePassWinHelloPlugin.plgx",
+    "version": "3.2",
+    "url": "https://github.com/sirAndros/KeePassWinHello/releases/download/v3.2/KeePassWinHelloPlugin.plgx",
     "description": "Quick unlock with Windows Hello for KeePass 2",
     "license": "MIT License",
-    "hash": "7c676b32f63a90a11e1f1b052dfee19061cd425c39c54ef25bc030085a4d4cc1",
+    "hash": "40c2e85c39e58aa72a4c06c30a56dda5bfdbf16866b451f9f6c548ae75571d5f",
     "depends": "extras/keepass",
     "homepage": "https://github.com/sirAndros/KeePassWinHello",
     "checkver": {

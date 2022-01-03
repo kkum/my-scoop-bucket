@@ -1,13 +1,13 @@
 {
-    "version": "0.9.2",
+    "version": "0.9.3",
     "url": [
-        "https://github.com/xatupal/KeeTheme/releases/download/v0.9.2/KeeTheme.dll",
-        "https://github.com/xatupal/KeeTheme/releases/download/v0.9.2/KeeTheme.plgx"
+        "https://github.com/xatupal/KeeTheme/releases/download/v0.9.3/KeeTheme.dll",
+        "https://github.com/xatupal/KeeTheme/releases/download/v0.9.3/KeeTheme.plgx"
     ],
     "description": "KeeTheme Plugin changes the appearance of KeePass, to make it look better at night.",
     "hash": [
-        "29b016b1e4e9850ff2c792e5742f8600b52c55d8392a19246978a1687c17f251",
-        "1ce8a3c3d3a853e1f6fef025768ecf85b50f2ac0546cf719df4a12a857fd11b3"
+        "cedbb46ed1a4cac62cb582449384ddfcbe6c843dc56241850f7d3d280c906853",
+        "fb9d2933917cbc5601c331e74f4795fb743c4fef06468837ec25553b94220dbf"
     ],
     "checkver": {
         "github": "https://github.com/xatupal/KeeTheme"

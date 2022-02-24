@@ -1,8 +1,8 @@
 {
-    "version": "2.4",
-    "url": "https://github.com/MircoBabin/KeePassCommander/releases/download/2.4/Release_2.4.zip",
+    "version": "2.5",
+    "url": "https://github.com/MircoBabin/KeePassCommander/releases/download/2.5/Release_2.5.zip",
     "description": "KeePass Commander is a plugin for the KeePass password store. It's purpose is to provide a communication channel for php-scripts, bat-files, powershell, python, C#, git, ... to be able to query the KeePass password store from the commandline without configuration and without password",
-    "hash": "1e36ab880f96d4af1cc589e3a269b92488d265c0c54db64c63d1749c3f0fda11",
+    "hash": "8c1314b24630ac57ff0a3fafd788cea7ad250a5002a0a76c7434fc27eadcb5c5",
     "depends": "extras/keepass",
     "license": "https://github.com/MircoBabin/KeePassCommander/blob/master/LICENSE.md",
     "homepage": "https://github.com/MircoBabin/KeePassCommander",
@@ -15,5 +15,17 @@
             "find": "sha512:\\s+(.*)"
         }
     },
-    "bin": "KeePassCommander.exe"
+    "installer": {
+        "script": "Get-Process -Name KeePass -ErrorAction SilentlyContinue | Stop-Process -Force -Verbose; Copy-Item \"$dir\\Kee*\" \"$(appdir keepass $global)\\current\\Plugins\\\"; KeePass"
+    },
+    "uninstaller": {
+        "script": "Get-Process -Name KeePass -ErrorAction SilentlyContinue | Stop-Process -Force -Verbose; Get-Item \"$dir\\Kee*\" | Foreach-Object { Remove-Item $( $_.FullName -replace [regex]::Escape($dir), \"$(appdir keepass $global)\\current\\Plugins\" ) -Force }; KeePass"
+    },
+    "bin": [
+        "KeePassCommand.exe",
+        "KeePassEntry.bat",
+        "KeePassEntry.php",
+        "KeePassEntry.py",
+        "KeePassEntry.ps1"
+    ]
 }

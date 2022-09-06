@@ -1,8 +1,8 @@
 {
-    "version": "2.4",
-    "url": "https://keepass.info/extensions/v2/keeautoexec/KeeAutoExec-2.4.zip",
+    "version": "2.5",
+    "url": "https://keepass.info/extensions/v2/keeautoexec/KeeAutoExec-2.5.zip",
     "description": "KeeAutoExec This plugin allows to automatically open additional databases when opening a database.",
-    "hash": "fa947fdd1be0b6abca4ff996c2824cddf4b6fa9c9af7682f941bf4c5df379d0c",
+    "hash": "b98c3df4a2cc2b64180a543ec8e3a7754d3e5dff78a47ef08c0c38c46384382a",
     "depends": "extras/keepass",
     "homepage": "https://keepass.info/plugins.html#keeautoexec",
     "installer": {

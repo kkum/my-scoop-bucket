@@ -1,8 +1,8 @@
 {
-    "version": "3.0",
-    "url": "https://github.com/MircoBabin/KeePassCommander/releases/download/3.0/KeePassCommander-3.0.zip",
+    "version": "3.1",
+    "url": "https://github.com/MircoBabin/KeePassCommander/releases/download/3.1/KeePassCommander-3.1.zip",
     "description": "KeePass Commander is a plugin for the KeePass password store. It's purpose is to provide a communication channel for php-scripts, bat-files, powershell, python, C#, git, ... to be able to query the KeePass password store from the commandline without configuration and without password",
-    "hash": "8373b848a6ee106aa06458c6ca5f358ca578a8d6bf73c9a4d82304790625c287",
+    "hash": "fdddf0191c2b233b57efea9ebadb206f50833225cb7ecc5e508478a6f9b78ab4",
     "depends": "extras/keepass",
     "license": "https://github.com/MircoBabin/KeePassCommander/blob/master/LICENSE.md",
     "homepage": "https://github.com/MircoBabin/KeePassCommander",
@@ -17,16 +17,26 @@
     },
     "installer": {
         "script": [
-            "Get-Process -Name KeePass -ErrorAction SilentlyContinue | Stop-Process -Force -Verbose;",
+            "$eap = $ErrorActionPreference",
+            "$ErrorActionPreference = 'SilentlyContinue'",
+            "$isRunning = (Get-Process -Name KeePass -ErrorAction SilentlyContinue) -ne $null",
+            "if ($isRunning){ Kill-Process $($IsRunning.Name) -Force -Verbose }",
             "Copy-Item \"$dir\\Kee*\" \"$(appdir keepass $global)\\current\\Plugins\\\";",
-            "KeePass"
+            "if ($isRunning){Start-Process Keepass}",
+            "$isRunning = $null",
+            "$ErrorActionPreference = $eap"
         ]
     },
     "uninstaller": {
         "script": [
-            "Get-Process -Name KeePass -ErrorAction SilentlyContinue | Stop-Process -Force -Verbose; ",
+            "$eap = $ErrorActionPreference",
+            "$ErrorActionPreference = 'SilentlyContinue'",
+            "$isRunning = (Get-Process -Name KeePass -ErrorAction SilentlyContinue) -ne $null",
+            "if ($isRunning){ Kill-Process $($IsRunning.Name) -Force -Verbose }",
             "Get-Item \"$dir\\Kee*\" | Foreach-Object { Remove-Item $( $_.FullName -replace [regex]::Escape($dir), \"$(appdir keepass $global)\\current\\Plugins\" ) -Force }; ",
-            "KeePass"
+            "if ($isRunning){Start-Process Keepass}",
+            "$isRunning = $null",
+            "$ErrorActionPreference = $eap"
         ]
     },
     "bin": [

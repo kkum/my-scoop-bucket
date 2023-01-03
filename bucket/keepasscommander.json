@@ -1,8 +1,8 @@
 {
-    "version": "3.1",
-    "url": "https://github.com/MircoBabin/KeePassCommander/releases/download/3.1/KeePassCommander-3.1.zip",
+    "version": "4.0",
+    "url": "https://github.com/MircoBabin/KeePassCommander/releases/download/4.0/KeePassCommander-4.0.zip",
     "description": "KeePass Commander is a plugin for the KeePass password store. It's purpose is to provide a communication channel for php-scripts, bat-files, powershell, python, C#, git, ... to be able to query the KeePass password store from the commandline without configuration and without password",
-    "hash": "fdddf0191c2b233b57efea9ebadb206f50833225cb7ecc5e508478a6f9b78ab4",
+    "hash": "b5fe3d892c37f2cbfbce0d50ca8cf7b1df65cb337c6494a08fd703cdf9411d14",
     "depends": "extras/keepass",
     "license": "https://github.com/MircoBabin/KeePassCommander/blob/master/LICENSE.md",
     "homepage": "https://github.com/MircoBabin/KeePassCommander",

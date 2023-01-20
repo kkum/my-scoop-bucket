@@ -24,20 +24,18 @@
         "autohotkey"
     ],
     "homepage": "https://github.com/rom1v/autoadb/issues/17",
-    "bin": ["autoadb.exe","ahk-autoadb-scrcpy-launch-to-tray.exe"],
-    "installer": {
-        "script": [
-            "Write-Host Installing",
-            "Get-Process ahk-autoadb-scrcpy-launch-to-tray -ErrorAction SilentlyContinue | Stop-Process",
-            "Get-Process autoadb -ErrorAction SilentlyContinue | Stop-Process",
-            "Copy-Item \"$bucketsdir\\kumar\\scripts\\autoadb\\*.ico\" \"$dir\"",
-            "Copy-Item \"$bucketsdir\\kumar\\scripts\\autoadb\\*.exe\" \"$dir\"" 
-        ]
-    },
+    "bin": [
+        "autoadb.exe",
+        "ahk-autoadb-scrcpy-launch-to-tray.exe"
+    ],
+    "pre_install": [
+        "Copy-Item \"$bucketsdir\\**\\scripts\\autoadb\\*.ico\" \"$dir\"",
+        "Copy-Item \"$bucketsdir\\**\\scripts\\autoadb\\*.exe\" \"$dir\""
+    ],
     "post_install": [
         "$exepath = \"$dir\\ahk-autoadb-scrcpy-launch-to-tray.exe\".Replace('\\', '\\\\')",
         "'add-startup', 'remove-startup' | ForEach-Object {",
-        "    $content = Get-Content \"$bucketsdir\\kumar\\scripts\\autoadb\\$_.reg\"",
+        "    $content = Get-Content \"$bucketsdir\\**\\scripts\\autoadb\\$_.reg\"",
         "    $content = $content.Replace('$exepath', $exepath)",
         "    if ($global) {",
         "       $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE')",
@@ -45,11 +43,9 @@
         "    $content | Set-Content -Path \"$dir\\$_.reg\"",
         "}"
     ],
-    "uninstaller": {
-        "script": [
-            "Write-Host Uninstalling",
-            "Get-Process ahk-autoadb-scrcpy-launch-to-tray -ErrorAction SilentlyContinue | Stop-Process",
-            "Get-Process autoadb -ErrorAction SilentlyContinue | Stop-Process"
-        ]
-    }
+    "pre_uninstall": [
+        "Write-Host Uninstalling",
+        "Get-Process ahk-autoadb-scrcpy-launch-to-tray -ErrorAction SilentlyContinue | Stop-Process",
+        "Get-Process autoadb -ErrorAction SilentlyContinue | Stop-Process"
+    ]
 }

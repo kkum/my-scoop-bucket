@@ -1,14 +1,14 @@
 {
-    "version": "0.7.2.2",
+    "version": "0.7.2.6",
     "license": "GNU GENERAL PUBLIC LICENSE",
     "homepage": "https://github.com/1Remote/PRemoteM",
-    "url": "https://github.com/1Remote/PRemoteM/releases/download/0.7.2.2/PRemoteM-0.7.2.2.zip",
-    "hash": "e45aa734d567fa8c3cbf612de19bbb31e418e88b4a85ac733282607c9262e66d",
+    "url": "https://github.com/1Remote/PRemoteM/releases/download/0.7.2.6/PRemoteM.zip",
+    "hash": "6e7e37e8f4bea5c910ea87bb54b78c907d0005e774dcbc33711fbc372de6621f",
     "checkver": {
         "github": "https://github.com/1Remote/PRemoteM"
     },
     "autoupdate": {
-        "url": "https://github.com/1Remote/PRemoteM/releases/download/$version/PRemoteM-$version.zip",
+        "url": "https://github.com/1Remote/PRemoteM/releases/download/$version/PRemoteM.zip",
         "hash": {
             "find": "sha512:\\s+(.*)"
         }

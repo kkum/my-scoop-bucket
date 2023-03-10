@@ -1,9 +1,13 @@
 {
-    "version": "0.1.0",
+    "version": "0.1.0.1",
     "url": [
         "https://tmp.rom1v.com/autoadb/0.1.0/autoadb.exe"
     ],
     "description": "AutoADB: execute a command whenever a device is adb-connected ",
+        "notes": [
+        "Add AutoADB-scrcpy to startup by running:",
+        "reg import \"$dir\\add-startup.reg\""
+    ],
     "hash": [
         "d367fd842c9a061141cc4a6c82cb444b079f42697306fd7dd39fc082d47b0c51",
         ""
@@ -46,6 +50,7 @@
     "pre_uninstall": [
         "Write-Host Uninstalling",
         "Get-Process ahk-autoadb-scrcpy-launch-to-tray -ErrorAction SilentlyContinue | Stop-Process",
-        "Get-Process autoadb -ErrorAction SilentlyContinue | Stop-Process"
+        "Get-Process autoadb -ErrorAction SilentlyContinue | Stop-Process",
+        "if ($cmd -eq 'uninstall') { reg import \"$dir\\remove-startup.reg\" }"
     ]
 }

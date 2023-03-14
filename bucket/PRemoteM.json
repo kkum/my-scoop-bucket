@@ -1,9 +1,9 @@
 {
-    "version": "0.7.2.6",
+    "version": "0.7.2.7",
     "license": "GNU GENERAL PUBLIC LICENSE",
     "homepage": "https://github.com/1Remote/PRemoteM",
-    "url": "https://github.com/1Remote/PRemoteM/releases/download/0.7.2.6/PRemoteM.zip",
-    "hash": "6e7e37e8f4bea5c910ea87bb54b78c907d0005e774dcbc33711fbc372de6621f",
+    "url": "https://github.com/1Remote/PRemoteM/releases/download/0.7.2.7/PRemoteM.zip",
+    "hash": "55be6903e4f08f62a5d957628d76b3295dabf9db86054c7b602448edcfdead94",
     "checkver": {
         "github": "https://github.com/1Remote/PRemoteM"
     },
@@ -13,10 +13,7 @@
             "find": "sha512:\\s+(.*)"
         }
     },
-    "uninstaller": {
-        
-    },
-    "installer": {
+    "post_install": {
         "script": "New-Item -Type File -Path \"$dir\\FORCE_INTO_APPDATA_MODE\";"
     },
     "bin": "PRemoteM.exe"

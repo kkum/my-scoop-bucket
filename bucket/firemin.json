@@ -1,0 +1,32 @@
+{
+    "version": "9.8.3.8388",
+    "description": "Utility to reduce the memory usage of Firefox or other browsers",
+    "homepage": "https://www.rizonesoft.com/downloads/firemin/",
+    "license": "GPL-3.0-or-later",
+    "url": "https://www.rizonesoft.com/mimnaa/10543/?tmstv=1695953169#/dl.zip",
+    "hash": "d462ca2371d58352f2b99f008f8bcaed7b73021301a97db89c2500476d1a0b05",
+    "extract_dir": "Firemin_8388",
+    "architecture": {
+        "64bit": {
+            "post_install": [
+                "Remove-Item \"$dir\\Firemin.exe\" -Verbose",
+                "Move-Item \"$dir\\Firemin_X64.exe\" \"$dir\\Firemin.exe\" -Force -Verbose"
+            ]
+        },
+        "32bit": {
+            "post_install": "Remove-Item \"$dir\\Firemin_X64.exe\""
+        }
+    },
+    "shortcuts": [
+        [
+            "Firemin.exe",
+            "Firemin"
+        ]
+    ],
+    "persist": "Firemin.ini",
+    "checkver": "(?sm)Portable version.*?title=\"Version.*?([\\d.]+)\".*?href=\"(?<link>.*?)\"",
+    "autoupdate": {
+        "url": "$matchLink#/dl.zip",
+        "extract_dir": "Firemin_$buildVersion"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "version": "2.12.1",
+    "description": "FancyWM - a dynamic tiling window manager for Windows 10/11",
+    "homepage": "https://github.com/FancyWM/fancywm",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://opensource.org/license/MIT/"
+    },
+    "url": "https://github.com/FancyWM/fancywm/releases/download/v2.12.1/FancyWM.Release.x64.zip",
+    "bin": "FancyWM.exe",
+    "shortcuts": [
+        [
+            "FancyWM.exe",
+            "FancyWM"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/FancyWM/fancywm"
+    },
+    "autoupdate": {
+        "url": "https://github.com/FancyWM/fancywm/releases/download/v$version/FancyWM.Release.x64.zip",
+        "hash": {
+            "type": "sha256",
+            "url": "https://github.com/FancyWM/fancywm/releases/download/v$version/FancyWM.Release.x64.zip.sha256sum"
+        }
+    }
+}

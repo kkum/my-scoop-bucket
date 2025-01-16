@@ -11,7 +11,5 @@
       "XKill"
     ]
   ],
-  "bin": [
-    "XKill.exe"
-  ]
+  "bin": "XKill.exe"
 }
